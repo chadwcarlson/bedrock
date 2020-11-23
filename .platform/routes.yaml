@@ -2,7 +2,6 @@
 "https://www.{default}/":
     type: upstream
     upstream: "app:http"
-    id: main
 
 "https://{default}/":
     type: redirect
