@@ -30,7 +30,7 @@ web:
     locations:
         "/":
             # The public directory of the app, relative to its root.
-            root: "web"
+            root: "web/wp"
             # The front-controller script to send non-static requests to.
             passthru: "/index.php"
             # Wordpress has multiple roots (wp-admin) so the following is required
@@ -47,11 +47,11 @@ web:
                     allow: false
                 ^/readme\.html$:
                     allow: false
-        "/wp/wp-content/cache":
+        "/wp-content/cache":
             root: "web/wp/wp-content/cache"
             scripts: false
             allow: false
-        "/web/wp/uploads":
+        "/wp-content/uploads":
             root: "wordpress/wp-content/uploads"
             scripts: false
             allow: true
