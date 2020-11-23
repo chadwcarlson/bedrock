@@ -51,7 +51,7 @@ web:
             root: "web/wp/wp-content/cache"
             scripts: false
             allow: false
-        "web/wp/uploads":
+        "/web/wp/uploads":
             root: "wordpress/wp-content/uploads"
             scripts: false
             allow: true
