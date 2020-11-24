@@ -26,4 +26,4 @@ wp-cli.local.yml
 
 config/environments/production.php
 
-.lando*
+.lando.yml
