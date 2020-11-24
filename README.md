@@ -122,6 +122,9 @@ export DB_USER=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".databa
 export DB_PASSWORD=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".database[0].password")
 export DB_PREFIX='wp_'
 
+
+export DATABASE_URL=mysql://user@database.internal:3306/main
+
 export DB_NAME=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".database[0].path")
 export DB_HOST='database.internal:3306'
 export DB_USER=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".database[0].username")
