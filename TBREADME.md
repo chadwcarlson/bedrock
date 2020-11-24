@@ -6,7 +6,7 @@
 </a>
 </p>
 
-This template builds WordPress on Platform.sh using the Bedrock boilerplate by Roots with Composer. Plugins and themes should be managed with Composer exclusively. The only modifications made to the standard Bedrock boilerplate have been providing database credentials and main site url parameters via environment variables. With this configuration, the database is automatically configured such that the installer will not ask you for database credentials. While Bedrock provides support to replicate this configuration in a `.env` file for local development, an example Lando configuration file is included as the recommendated method to do so. 
+This template builds WordPress on Platform.sh using the Bedrock boilerplate by Roots and Composer. Plugins and themes should be managed with Composer exclusively. The only modifications made to the standard Bedrock boilerplate have been providing database credentials and main site url parameters via environment variables. With this configuration, the database is automatically configured such that the installer will not ask you for database credentials. While Bedrock provides support to replicate this configuration in a `.env` file for local development, an example Lando configuration file is included as the recommendated method to do so. 
 
 WordPress is a blogging and lightweight CMS written in PHP, and Bedrock is a Composer-based WordPress boilerplate project with a slightly modified project structure and configuration protocol. 
 
@@ -19,7 +19,7 @@ WordPress is a blogging and lightweight CMS written in PHP, and Bedrock is a Com
 
 ## Post-install
 
-1. Run through the WordPress installer as normal. You will not be asked for database credentials as those are already provided.
+Run through the WordPress installer as normal. You will not be asked for database credentials as those are already provided.
 
 ## Customizations
 
