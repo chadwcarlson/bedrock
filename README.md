@@ -167,3 +167,13 @@ export AUTH_SALT=$PLATFORM_PROJECT_ENTROPY
 export SECURE_AUTH_SALT=$PLATFORM_PROJECT_ENTROPY
 export LOGGED_IN_SALT=$PLATFORM_PROJECT_ENTROPY
 export NONCE_SALT=$PLATFORM_PROJECT_ENTROPY
+
+
+WP_HOME=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.primary == true) | .key')
+WP_SITEURL="${WP_HOME}wp"
+WP_DEBUG_LOG=/var/log/app.log
+if [ "$PLATFORM_BRANCH" != "master" ] ; then
+    export WP_ENV='development'
+else
+    export WP_ENV='production'
+fi
