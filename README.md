@@ -143,3 +143,5 @@ NONCE_SALT=$PLATFORM_PROJECT_ENTROPY
 
 export DB_HOST=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".database[0].host")
 export DB_PORT=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".database[0].port")
+
+small chaange
