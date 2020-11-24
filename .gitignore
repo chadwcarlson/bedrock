@@ -14,12 +14,16 @@ web/.htaccess
 *.log
 
 # Dotenv
-.env
-.env.*
+
 !.env.example
+.environment
 
 # Composer
 /vendor
 
 # WP-CLI
 wp-cli.local.yml
+
+config/environments/production.php
+
+.lando*
