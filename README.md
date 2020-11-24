@@ -143,3 +143,37 @@ NONCE_SALT=$PLATFORM_PROJECT_ENTROPY
 
 export DB_HOST=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".database[0].host")
 export DB_PORT=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".database[0].port")
+
+small chaange
+
+WP_ENV='development'
+WP_HOME='http://example.com'
+WP_SITEURL="${WP_HOME}/wp"
+WP_DEBUG_LOG=/path/to/debug.log
+
+if [ "$PLATFORM_BRANCH" != "master" ] ; then
+    export WP_ENV='development'
+else
+    export WP_ENV='production'
+fi
+
+# Generate your keys here: https://roots.io/salts.html
+export APP_SECRET=$PLATFORM_PROJECT_ENTROPY
+export AUTH_KEY=$PLATFORM_PROJECT_ENTROPY
+export SECURE_AUTH_KEY=$PLATFORM_PROJECT_ENTROPY
+export LOGGED_IN_KEY=$PLATFORM_PROJECT_ENTROPY
+export NONCE_KEY=$PLATFORM_PROJECT_ENTROPY
+export AUTH_SALT=$PLATFORM_PROJECT_ENTROPY
+export SECURE_AUTH_SALT=$PLATFORM_PROJECT_ENTROPY
+export LOGGED_IN_SALT=$PLATFORM_PROJECT_ENTROPY
+export NONCE_SALT=$PLATFORM_PROJECT_ENTROPY
+
+
+WP_HOME=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.primary == true) | .key')
+WP_SITEURL="${WP_HOME}wp"
+WP_DEBUG_LOG=/var/log/app.log
+if [ "$PLATFORM_BRANCH" != "master" ] ; then
+    export WP_ENV='development'
+else
+    export WP_ENV='production'
+fi
