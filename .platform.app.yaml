@@ -14,6 +14,7 @@ build:
 dependencies:
     php:
         composer/composer: '^2.0'
+        wp-cli/wp-cli: "^2.2.0"
 
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed
@@ -21,6 +22,14 @@ dependencies:
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
     database: "db:mysql"
+
+hooks:
+    build: |
+        composer --version
+    deploy: |
+        composer --version
+    post_deploy: |
+        composer --version
 
 # The configuration of app when it is exposed to the web.
 web:
@@ -55,10 +64,6 @@ web:
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
-
-dependencies:
-    php:
-        wp-cli/wp-cli: "^2.2.0"
 
 # The mounts that will be performed when the package is deployed.
 mounts:
