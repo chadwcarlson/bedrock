@@ -21,6 +21,14 @@ WordPress is a blogging and lightweight CMS written in PHP, and Bedrock is a Com
 
 Run through the WordPress installer as normal. You will not be asked for database credentials as those are already provided.
 
+WooCommerce: `curl https://raw.githubusercontent.com/woocommerce/woocommerce/master/sample-data/sample_products.csv >> sample_products.csv`
+- Go into plugins and activate
+    * WooCommerce
+    * WooCommerce Admin
+    * WooCommerce Blocks
+    * JetPack
+- WooCommerce Tax: enable tax calculations on your projects `WooCommerce > Settings > General`, selecting the `Enable tax rates and calculations` checkbox.
+
 ## Customizations
 
 The following changes have been made relative to Bedrock's project creation command `composer create-project roots/bedrock`. If using this project as a reference for your own existing project, replicate the changes below to your project.
