@@ -17,8 +17,6 @@ build:
 
 hooks:
     build: |
-        # composer --version
-        # composer self-update --2
         composer --version
         composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
 
