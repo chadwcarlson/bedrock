@@ -76,6 +76,15 @@ if (env('DATABASE_URL')) {
     Config::define('DB_HOST', isset($dsn->port) ? "{$dsn->host}:{$dsn->port}" : $dsn->host);
 }
 
+// /* Multisite */
+// define( 'WP_ALLOW_MULTISITE', true );
+// define('MULTISITE', true);
+// define('SUBDOMAIN_INSTALL', false);
+// define('DOMAIN_CURRENT_SITE', 'subdirectory-2mi7a7i-id6sscbstrrsa.au.platformsh.site');
+// define('PATH_CURRENT_SITE', '/');
+// define('SITE_ID_CURRENT_SITE', 1);
+// define('BLOG_ID_CURRENT_SITE', 1);
+
 /**
  * Authentication Unique Keys and Salts
  */
