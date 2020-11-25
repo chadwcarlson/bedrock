@@ -8,8 +8,14 @@ name: app
 type: "php:7.4"
 
 # Configuration of the build of the application.
+# Configuration of the build of the application.
 build:
-    flavor: composer
+    flavor: none
+
+hooks:
+    build: |
+        composer --version
+        composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
 
 dependencies:
     php:
