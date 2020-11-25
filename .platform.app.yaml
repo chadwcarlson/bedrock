@@ -7,20 +7,20 @@ name: app
 # The runtime the application uses.
 type: "php:7.4"
 
+dependencies:
+    php:
+        composer/composer: '^2.0'
+
 # Configuration of the build of the application.
 build:
     flavor: none
 
 hooks:
     build: |
-        composer --version
-        composer self-update --2
+        # composer --version
+        # composer self-update --2
         composer --version
         composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
-
-# dependencies:
-#     php:
-#         composer/composer: '^2.0'
 
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed
