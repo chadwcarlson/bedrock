@@ -11,9 +11,9 @@ dependencies:
     php:
         composer/composer: '^2.0'
 
-# # Configuration of the build of the application.
-# build:
-#     flavor: none
+# Configuration of the build of the application.
+build:
+    flavor: none
 
 hooks:
     build: |
