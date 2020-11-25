@@ -76,14 +76,20 @@ if (env('DATABASE_URL')) {
     Config::define('DB_HOST', isset($dsn->port) ? "{$dsn->host}:{$dsn->port}" : $dsn->host);
 }
 
-// /* Multisite */
-// define( 'WP_ALLOW_MULTISITE', true );
-// define('MULTISITE', true);
-// define('SUBDOMAIN_INSTALL', false);
-// define('DOMAIN_CURRENT_SITE', 'subdirectory-2mi7a7i-id6sscbstrrsa.au.platformsh.site');
-// define('PATH_CURRENT_SITE', '/');
-// define('SITE_ID_CURRENT_SITE', 1);
-// define('BLOG_ID_CURRENT_SITE', 1);
+/* Multisite */
+define( 'WP_ALLOW_MULTISITE', true );
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', false);
+define('DOMAIN_CURRENT_SITE', 'https://www.pr-6-3qodc7y-uaqs6spr7ib7q.eu-4.platformsh.site');
+define('PATH_CURRENT_SITE', '/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
+
+// define('ADMIN_COOKIE_PATH', '/');
+// define('COOKIE_DOMAIN', '');
+// define('COOKIEPATH', '');
+// define('SITECOOKIEPATH', '');
+
 
 /**
  * Authentication Unique Keys and Salts
