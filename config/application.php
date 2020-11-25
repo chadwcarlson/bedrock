@@ -77,13 +77,13 @@ if (env('DATABASE_URL')) {
 }
 
 /* Multisite */
-define( 'WP_ALLOW_MULTISITE', true );
-define('MULTISITE', true);
-define('SUBDOMAIN_INSTALL', false);
-define('DOMAIN_CURRENT_SITE', 'https://www.pr-6-3qodc7y-uaqs6spr7ib7q.eu-4.platformsh.site');
-define('PATH_CURRENT_SITE', '/');
-define('SITE_ID_CURRENT_SITE', 1);
-define('BLOG_ID_CURRENT_SITE', 1);
+Config::define( 'WP_ALLOW_MULTISITE', true );
+Config::define('MULTISITE', true);
+Config::define('SUBDOMAIN_INSTALL', false);
+Config::define('DOMAIN_CURRENT_SITE', 'https://www.pr-6-3qodc7y-uaqs6spr7ib7q.eu-4.platformsh.site');
+Config::define('PATH_CURRENT_SITE', '/');
+Config::define('SITE_ID_CURRENT_SITE', 1);
+Config::define('BLOG_ID_CURRENT_SITE', 1);
 
 // define('ADMIN_COOKIE_PATH', '/');
 // define('COOKIE_DOMAIN', '');
