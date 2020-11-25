@@ -77,13 +77,13 @@ if (env('DATABASE_URL')) {
 }
 
 /* Multisite */
-define('WP_ALLOW_MULTISITE', true);
-define('MULTISITE', true);
-define('SUBDOMAIN_INSTALL', false); // obv switch this to true if you're using subdomains
-define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE') ?: parse_url(env('WP_HOME'),  PHP_URL_HOST));
-define('PATH_CURRENT_SITE', '/');
-define('SITE_ID_CURRENT_SITE', 1);
-define('BLOG_ID_CURRENT_SITE', 1);
+Config::define('WP_ALLOW_MULTISITE', true);
+Config::define('MULTISITE', true);
+Config::define('SUBDOMAIN_INSTALL', false); // obv switch this to true if you're using subdomains
+Config::define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE') ?: parse_url(env('WP_HOME'),  PHP_URL_HOST));
+Config::define('PATH_CURRENT_SITE', '/');
+Config::define('SITE_ID_CURRENT_SITE', 1);
+Config::define('BLOG_ID_CURRENT_SITE', 1);
 // Config::define('MULTISITE', true);
 // Config::define('SUBDOMAIN_INSTALL', false);
 // Config::define('DOMAIN_CURRENT_SITE', 'pr-6-3qodc7y-uaqs6spr7ib7q.eu-4.platformsh.site');
