@@ -8,7 +8,6 @@ name: app
 type: "php:7.4"
 
 # Configuration of the build of the application.
-# Configuration of the build of the application.
 build:
     flavor: none
 
