@@ -78,7 +78,7 @@ if (env('DATABASE_URL')) {
 
 /* Multisite */
 Config::define('WP_ALLOW_MULTISITE', true);
-Config::define('MULTISITE', true);
+Config::define('MULTISITE', false);
 Config::define('SUBDOMAIN_INSTALL', false); // obv switch this to true if you're using subdomains
 Config::define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE') ?: parse_url(env('WP_HOME'),  PHP_URL_HOST));
 Config::define('PATH_CURRENT_SITE', '/');
