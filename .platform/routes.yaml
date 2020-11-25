@@ -1,6 +1,6 @@
 "https://{default}/":
     type: upstream
-    upstream: "app:http"
+    upstream: "app b:http"
     cache:
         enabled: true
         # Base the cache on the session cookies. Ignore all other cookies.
