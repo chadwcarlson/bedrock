@@ -80,7 +80,7 @@ if (env('DATABASE_URL')) {
 define('WP_ALLOW_MULTISITE', true);
 define('MULTISITE', true);
 define('SUBDOMAIN_INSTALL', false); // obv switch this to true if you're using subdomains
-define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE') ?: parse_url(WP_HOME,  PHP_URL_HOST));
+define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE') ?: parse_url(env('WP_HOME'),  PHP_URL_HOST));
 define('PATH_CURRENT_SITE', '/');
 define('SITE_ID_CURRENT_SITE', 1);
 define('BLOG_ID_CURRENT_SITE', 1);
