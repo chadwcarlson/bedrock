@@ -80,7 +80,7 @@ if (env('DATABASE_URL')) {
 Config::define('WP_ALLOW_MULTISITE', true);
 Config::define('MULTISITE', true);
 Config::define('SUBDOMAIN_INSTALL', false);
-Config::define('DOMAIN_CURRENT_SITE', 'www.pr-6-3qodc7y-uaqs6spr7ib7q.eu-4.platformsh.site');
+Config::define('DOMAIN_CURRENT_SITE', 'pr-6-3qodc7y-uaqs6spr7ib7q.eu-4.platformsh.site');
 Config::define('PATH_CURRENT_SITE', '/');
 Config::define('SITE_ID_CURRENT_SITE', 1);
 Config::define('BLOG_ID_CURRENT_SITE', 1);
