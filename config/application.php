@@ -78,6 +78,12 @@ if (env('DATABASE_URL')) {
 
 /* Multisite */
 Config::define('WP_ALLOW_MULTISITE', true);
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', false);
+define('DOMAIN_CURRENT_SITE', 'pr-6-3qodc7y-uaqs6spr7ib7q.eu-4.platformsh.site');
+define('PATH_CURRENT_SITE', '/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
 // Config::define('MULTISITE', false);
 // Config::define('SUBDOMAIN_INSTALL', false); // obv switch this to true if you're using subdomains
 // Config::define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE') ?: parse_url(env('WP_HOME'),  PHP_URL_HOST));
