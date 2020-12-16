@@ -21,7 +21,8 @@ WordPress is a blogging and lightweight CMS written in PHP, and Bedrock is a Com
 
 1. Run through the WordPress installer as normal. You will not be asked for database credentials as those are already provided.
 2. Login with your admin credentials, and then select `Network Setup` under the `Tools` section of the sidebar.
-3. 
+3. Redeploy the project, either through the management console or via the CLI command `platform environment:redeploy`.
+4.  
 
 ## Customizations
 
